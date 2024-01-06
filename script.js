@@ -33,7 +33,7 @@ generateBtn.addEventListener("click", function(){ });
 
  function generatePassword() {
   let length = prompt("Please enter a password that is between 8 and 128 characters.");
-    if (length < 8 || length > 129){
+    if (length < 8 || length > 128){
       length = prompt("Password must be between 8 and 128 characters");
     } else {
       console.log(length);
