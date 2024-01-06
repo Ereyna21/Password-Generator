@@ -50,13 +50,23 @@ generateBtn.addEventListener("click", function(){ });
       console.log(special);
         
     } 
-    function generatePassword(){
-      if (!lowCase && !upCase && !numbers && !special);{
-        options = prompt("Your password needs to have atleast one of the character types.");
-        generatePassword();
+    // function getUserOptions(){
+    //   if (!lowCase && !upCase && !numbers && !special);{
+    //     options = prompt("Your password needs to have atleast one of the character types.");
+      
 
+    // }
+    function getUserOptions(options, password) {
+      const areAllOptionsBoolean = options.every(option => typeof option === 'boolean');
+      return {
+        options: areAllOptionsBoolean,
+        password: password
+      };
     }
-  }
+    
+    const options = [true, false, true]; // Example array of options
+    const password = "Password123"; // Example password
+    prompt(getUserOptions(options, password));
 var passNone =[];
 
 for (var i =0; i < length; i++){
@@ -69,4 +79,4 @@ for (var i =0; i < length; i++){
 
     function getGeneratePassword(){
       
-    } }    
+    } }
